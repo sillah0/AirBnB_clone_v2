@@ -30,22 +30,21 @@ def c(text):
 @app.route("/python/<text>", strict_slashes=False)
 def python(text="is cool"):
     """display python followed by a value"""
-    
-    
+
     return f"Python {text.replace('_', ' ')}"
 
 
 @app.route("/number/<int:n>", strict_slashes=False)
 def is_number(n):
     """display if in is int"""
-    
+
     return f"{n} is a number"
 
 
 @app.route("/number_template/<int:n>", strict_slashes=False)
 def number(n):
     """ display a HTML page only if n is an integer"""
-    
+
     return render_template("5-number.html", n=n)
 
 
